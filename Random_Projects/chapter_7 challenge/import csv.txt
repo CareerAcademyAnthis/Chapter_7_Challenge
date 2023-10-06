@@ -1,0 +1,26 @@
+import csv
+# Pull in the CSV file
+filename = 'Chapter_7Challenge.csv'
+with open(filename) as f:
+    reader = csv.reader(f)
+    header_row = next(reader)
+    for index, colum_header in enumerate(header_row):
+        print(index, colum_header)
+
+    # Loop through the csv file and create two lists
+    name = []
+    candy_type_1 = []
+    candy_type_2 = []
+    candy_price_1 = []
+    candy_price_2 = []
+
+    for row in reader:
+        name = row[0]
+        candy_1 = row[1]
+        candy_2 = row[3]
+        price_1 = float(row[2])
+        price_2 = float(row[4])
+
+        # add the code here that will append each variable above into the correct list.
+
+    # Print each list
